@@ -23,15 +23,15 @@ app.controller('mainController', function($scope, $interval){
 
 app.filter('buttonFilter', function(){
     return function(status){
-        if(status === 'INIT') return 'START';
-        if(status === 'WORKING') return 'STOP';
+        if(status === 'INIT') return 'Boom !';
+        if(status === 'WORKING') return 'Stop -_-';
         return 'DEAD';
     }
 });
 
 app.filter('timeFilter', function(){
     return function(seconds){
-        if( seconds < 0 ) return 'ZzzzZzzz';
+        if( seconds < 0 ) return '';
         return util.secondsToTimeStr(seconds);
     }
 });
