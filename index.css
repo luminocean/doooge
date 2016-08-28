@@ -3,28 +3,28 @@ body{
     -webkit-app-region: drag;
 }
 
+/* background image keeps the whole application have a reasonable size*/
 #background{
-    width: 300px;
     z-index: -200;
+}
+#backgroundImg{
+    width: 300px;
 }
 
 #countDownDiv{
-    float: left;
     position: fixed;
-    left: 120px;
-    top: 50px;
+    left: 0px; /* even 0 need to be specified */
+    top: 0px; /* for fixed and absolute, the default value for left and top are not 0 */
 }
 
 #countDownTime{
-    float: left;
-    position: fixed;
-    left: 140px;
-    top: 50px;
+    position: absolute;
+    left: 125px;
+    top: 56px;
 }
 
 #countDownBtn{
-    float: left;
-    position: fixed;
+    position: absolute;
     left: 200px;
     top: 50px;
 
@@ -33,16 +33,13 @@ body{
     border-radius: 15px;
     box-shadow: 0 4px #999;
 }
-
 #countDownBtn > img{
     width: 50px;
 }
-
 #countDownBtn:active {
     box-shadow: 0 2px #666;
     transform: translateY(2px);
 }
-
 #countDownBtn:focus {
     outline:0;
 }

@@ -7,8 +7,8 @@
     </head>
     <body ng-app="app">
         <div id="mainDiv" ng-controller="mainController">
-            <div>
-                <img id="background" src="./resources/background.png">
+            <div id="background">
+                <img id="backgroundImg" src="./resources/background.png">
             </div>
             <div id="countDownDiv">
                 <span id="countDownTime" ng-bind="countDown | timeFilter"></span>
