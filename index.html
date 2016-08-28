@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Mushrush</title>
+    </head>
+    <body ng-app="app">
+        <div id="mainDiv" ng-controller="mainController">
+            <div id="countDownDiv">
+                <button ng-click="trigger()"
+                        ng-bind="status | buttonFilter"></button>
+                <span ng-bind="countDown | timeFilter"></span>
+            </div>
+        </div>
+    </body>
+
+    <!-- import global angular facilities -->
+    <script src="./node_modules/angular/angular.js"></script>
+    <!-- main logic -->
+    <script src="./index.js"></script>
+</html>
