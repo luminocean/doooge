@@ -1,0 +1,48 @@
+/* the whole body is draggable */
+body{
+    -webkit-app-region: drag;
+}
+
+#background{
+    width: 300px;
+    z-index: -200;
+}
+
+#countDownDiv{
+    float: left;
+    position: fixed;
+    left: 120px;
+    top: 50px;
+}
+
+#countDownTime{
+    float: left;
+    position: fixed;
+    left: 140px;
+    top: 50px;
+}
+
+#countDownBtn{
+    float: left;
+    position: fixed;
+    left: 200px;
+    top: 50px;
+
+    background-color: bisque;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px #999;
+}
+
+#countDownBtn > img{
+    width: 50px;
+}
+
+#countDownBtn:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+#countDownBtn:focus {
+    outline:0;
+}

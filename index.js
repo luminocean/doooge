@@ -23,9 +23,9 @@ app.controller('mainController', function($scope, $interval){
 
 app.filter('buttonFilter', function(){
     return function(status){
-        if(status === 'INIT') return 'Boom !';
-        if(status === 'WORKING') return 'Stop -_-';
-        return 'DEAD';
+        if(status === 'INIT') return 'boom';
+        if(status === 'WORKING') return 'stop';
+        return 'nothing'; // unknown status
     }
 });
 

@@ -3,57 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <title>Mushrush</title>
-        <style>
-            /* the whole body is draggable */
-            body{
-                -webkit-app-region: drag;
-            }
-
-            #background{
-                width: 300px;
-                z-index: -200;
-            }
-
-            #countDownDiv{
-                float: left;
-                position: fixed;
-                left: 120px;
-                top: 50px;
-            }
-            #countDownTime{
-                float: left;
-                position: fixed;
-                left: 140px;
-                top: 50px;
-                z-index: 0;
-            }
-            #countDownBtn{
-                float: left;
-                position: fixed;
-                left: 200px;
-                top: 50px;
-                z-index: 0;
-
-                border: none;
-                border-radius: 15px;
-                box-shadow: 0 6px #999;
-            }
-            #countDownBtn:active {
-                box-shadow: 0 2px #666;
-                transform: translateY(4px);
-            }
-            #countDownBtn:focus {
-                outline:0;
-            }
-        </style>
+        <link rel="stylesheet" href="./index.css">
     </head>
     <body ng-app="app">
         <div id="mainDiv" ng-controller="mainController">
-            <img id="background" src="./resources/background.png" />
+            <div>
+                <img id="background" src="./resources/background.png">
+            </div>
             <div id="countDownDiv">
                 <span id="countDownTime" ng-bind="countDown | timeFilter"></span>
-                <button id="countDownBtn" ng-click="trigger()"
-                        ng-bind="status | buttonFilter"></button>
+                <button id="countDownBtn" ng-click="trigger()">
+                    <img ng-src="./resources/{{status|buttonFilter}}.png">
+                </button>
             </div>
         </div>
     </body>
