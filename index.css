@@ -4,6 +4,10 @@ body{
     overflow:hidden;
 }
 
+button{
+    -webkit-app-region: no-drag;
+}
+
 #mainDiv{
     -webkit-app-region: drag;
 
@@ -67,7 +71,6 @@ body{
     font-size: 1.2em;
 }
 #countDownBtn{
-    -webkit-app-region: no-drag;
     float: right;
     margin-right: 90px;
 

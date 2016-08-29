@@ -8,11 +8,14 @@ const BrowserWindow = electron.BrowserWindow;
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
+const width = 400;
+const height = 207;
+
 function createWindow() {
-    const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
+    const size = electron.screen.getPrimaryDisplay().workAreaSize;
     // Create the browser window.
     mainWindow = new BrowserWindow({
-        // x: width,
+        x: size['width'] - width,
         y: 0,
         width: 400,
         height: 207,
