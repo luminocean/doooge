@@ -1,4 +1,5 @@
-const path = require('path')
+const path = require('path');
+const electron = require('electron');
 const core = require('./doooge/core');
 const util = require('./doooge/util');
 
@@ -19,6 +20,11 @@ app.controller('mainController', function($scope, $interval){
             $interval.cancel(counting);
             $scope.countDown = -1;
         }
+    };
+
+    $scope.minimize = function(){
+        // window.close();
+        electron.remote.BrowserWindow.getFocusedWindow().minimize();
     };
 });
 

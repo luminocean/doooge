@@ -20,10 +20,30 @@ body{
     clear: both;
 }
 
+.invisible{
+    color: Transparent;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
 #countDownDiv{
     position: absolute;
     width: 100%;
     top: 60px;
+}
+
+#controlDiv{
+    position: absolute;
+}
+
+#minimizeBtn{
+    position: absolute;
+    top: 105px;
+    left: 66px;
 }
 
 /**
