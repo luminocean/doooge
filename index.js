@@ -22,8 +22,11 @@ app.controller('mainController', function($scope, $interval){
         }
     };
 
+    $scope.close = function(){
+        electron.remote.BrowserWindow.getFocusedWindow().close();
+    };
+
     $scope.minimize = function(){
-        // window.close();
         electron.remote.BrowserWindow.getFocusedWindow().minimize();
     };
 });

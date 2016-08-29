@@ -30,25 +30,35 @@ body{
     outline:none;
 }
 
+/**
+ * control panel
+ **/
+#controlDiv{
+    /* make width relative to its parent, so that float right will work */
+    position: absolute;
+    width: 100%;
+}
+#closeBtn{
+    float: right;
+    position: relative;
+    right: 83px;
+    top: 15px;
+}
+#minimizeBtn{
+    float: left;
+    position: relative;
+    left: 67px;
+    top: 107px;
+}
+
+/**
+ * count down panel
+ **/
 #countDownDiv{
     position: absolute;
     width: 100%;
     top: 60px;
 }
-
-#controlDiv{
-    position: absolute;
-}
-
-#minimizeBtn{
-    position: absolute;
-    top: 105px;
-    left: 66px;
-}
-
-/**
- * timer display
- **/
 #countDownTime{
     float: left;
     margin-left: 170px;
@@ -56,9 +66,6 @@ body{
 
     font-size: 1.2em;
 }
-/**
- * button
- **/
 #countDownBtn{
     -webkit-app-region: no-drag;
     float: right;
