@@ -1,5 +1,6 @@
-const core = require('./mushrush/core');
-const util = require('./mushrush/util');
+const path = require('path')
+const core = require('./doooge/core');
+const util = require('./doooge/util');
 
 let app = angular.module('app', []);
 app.controller('mainController', function($scope, $interval){

@@ -5,7 +5,8 @@
   "main": "launcher.js",
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:win": "./node_modules/.bin/electron-packager . --out=./dist --platform=win32 --arch=x64 --overwrite"
   },
   "author": "luMinO",
   "license": "MIT",

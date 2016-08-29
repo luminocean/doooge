@@ -8,7 +8,7 @@ body{
     z-index: -200;
 }
 #backgroundImg{
-    width: 300px;
+    width: 100%;
 }
 
 #countDownDiv{
@@ -24,6 +24,8 @@ body{
 }
 
 #countDownBtn{
+    -webkit-app-region: no-drag;
+
     position: absolute;
     left: 200px;
     top: 50px;
