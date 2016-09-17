@@ -7,12 +7,11 @@
     </head>
     <body ng-app="app">
         <div id="mainDiv" ng-controller="mainController">
-            <div id="countDownDiv">
-                <span id="countDownTime" ng-bind="countDown | timeFilter"></span>
-                <button id="countDownBtn" ng-click="trigger()">
-                    <img ng-src="./resources/{{status|buttonFilter}}.png">
+            <div id="timerDiv">
+                <span id="timerTime" ng-bind="countDown | timeFilter"></span>
+                <button id="timerBtn" ng-click="trigger()">
+                    <img ng-src="./resources/{{status | buttonFilter}}.png">
                 </button>
-                <div class="horizon-splitter"></div>
             </div>
             <div id="controlDiv">
                 <button id="closeBtn" class="invisible" ng-click="close()">X</button>

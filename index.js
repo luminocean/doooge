@@ -4,11 +4,12 @@ const core = require('./doooge/core');
 const util = require('./doooge/util');
 
 let app = angular.module('app', []);
+
 app.controller('mainController', function($scope, $interval){
     $scope.countDown = -1;
     $scope.status = 'INIT';
 
-    let counting;
+    let counting = null;
     // executed when the button is clicked
     $scope.trigger = function(){
         if(this.status == 'INIT'){
@@ -41,7 +42,7 @@ app.filter('buttonFilter', function(){
 
 app.filter('timeFilter', function(){
     return function(seconds){
-        if( seconds < 0 ) return '';
+        if( seconds < 0 ) return 'READY';
         return util.secondsToTimeStr(seconds);
     }
 });
