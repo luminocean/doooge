@@ -1,10 +1,11 @@
-let countDown = function(scope, interval, seconds){
-    scope.countDown = seconds;
+let countDown = function(interval, scope, key, seconds, done){
+    scope[key] = seconds;
 
     let counting = interval(function(){
-        scope.countDown--;
-        if(scope.countDown <= 0)
-            interval.cancel(counting); // timeout, cancel itself
+        scope[key]--;
+        if(scope[key] <= 0){
+            done();
+        }
     }, 1000);
 
     return counting;

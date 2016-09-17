@@ -10,16 +10,30 @@ app.controller('mainController', function($scope, $interval){
     $scope.status = 'INIT';
 
     let counting = null;
+
+    let reset = function(){
+        this.status = 'INIT';
+        this.countDown = -1;
+
+        if( counting ){
+            $interval.cancel(counting);
+            counting = null;
+        }
+    };
+
     // executed when the button is clicked
     $scope.trigger = function(){
         if(this.status == 'INIT'){
             this.status = 'WORKING';
-            counting = core.countDown($scope, $interval, 30*60);
+            counting = core.countDown($interval, $scope, 'countDown', 25*60, function(){
+                reset.apply($scope);
+            });
         }
         else if(this.status == 'WORKING'){
-            this.status = 'INIT';
-            $interval.cancel(counting);
-            $scope.countDown = -1;
+            reset.apply($scope);
+        }
+        else{
+            console.error('Unknown trigger button status: ' + this.status);
         }
     };
 
